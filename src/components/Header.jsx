@@ -1,4 +1,6 @@
 import React from 'react'
+import {AiFillVideoCamera, AiFillHome, AiOutlineVideoCamera,AiOutlineVideoCameraAdd,AiFillInfoCircle} from 'react-icons/ai'
+
 import {
     Drawer,
     DrawerBody,
@@ -17,6 +19,7 @@ const Header = () => {
 const {isOpen,onOpen,onClose} = useDisclosure()
   return ( <>
     <Button
+    zIndex={'overlay'}
     pos={'fixed'}
     top={'4'}
     left={'4'}
@@ -39,23 +42,28 @@ const {isOpen,onOpen,onClose} = useDisclosure()
             <DrawerBody>
             <VStack alignItems={'flex-start'}>
                 <Button onClick={onClose} variant={'ghost'} colorScheme='purple'>
-                    <Link to={'/'}>Home</Link>
+                    <AiFillHome size={20}/>
+                    <Link to={'/'}>&nbsp; Home</Link>
                 </Button>
 
                 <Button onClick={onClose} variant={'ghost'} colorScheme='purple'>
-                    <Link to={'/videos'}>Videos</Link>
+                    <AiFillVideoCamera size={20}/>
+                    <Link to={'/videos'}>&nbsp; Videos</Link>
                 </Button>
 
                 <Button onClick={onClose} variant={'ghost'} colorScheme='purple'>
-                    <Link to={'/videos?category=free'}>Free Videos</Link>
+                    <AiOutlineVideoCamera size={20}/>
+                    <Link to={'/videos?category=free'}>&nbsp; Free Videos</Link>                   
                 </Button>
 
                 <Button onClick={onClose} variant={'ghost'} colorScheme='purple'>
-                    <Link to={'/upload'}>Upload Video</Link>
+                    <AiOutlineVideoCameraAdd size={20}/>
+                    <Link to={'/upload'}>&nbsp; Upload Video</Link>
                 </Button>
 
                 <Button onClick={onClose} variant={'ghost'} colorScheme='purple'>
-                    <Link to={'/about'}>About</Link>
+                    <AiFillInfoCircle size={20}/>
+                    <Link to={'/about'}>&nbsp; About</Link>
                 </Button>
 
             </VStack>

@@ -69,7 +69,7 @@ const MyCarousel = ()=>(
     >
     <Box w='full' h={'100vh'}>
         <Image src={img1}/>
-        <Heading bgColor={'balckAlpha.600'} color={'white'} {...headingOptions}> 
+        <Heading bgColor={'blackAlpha.600'} color={'white'} {...headingOptions}> 
         Watch The Future
         </Heading>
     </Box>

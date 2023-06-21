@@ -1,6 +1,6 @@
 import React from 'react'
-import {Box, Button, Center, HStack, Heading, Input, Stack, VStack,Text} from '@chakra-ui/react'
-import {AiOutlineSend} from 'react-icons/ai'
+import {Box, Button, HStack, Heading, Input, Stack, VStack,Text} from '@chakra-ui/react'
+import {AiOutlineSend, AiFillYoutube, AiFillInstagram, AiFillGithub} from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -13,7 +13,9 @@ const Footer = () => {
             w={'full'}
             px={'4'}
             >
-                <Heading size='md' textTransform={'uppercase'}>
+                <Heading size='md' 
+                textTransform={'uppercase'} 
+                textAlign={["center",'left']}>
                     Subscribe to get Updates
                 </Heading>
                 <HStack
@@ -23,9 +25,9 @@ const Footer = () => {
                     <Input 
                     placeholder='Enter Email Here...' 
                     border={'none'} 
-                    borderRadius='none'
+                    borderRadius={'none'}
                     outline={'none'}
-                    focusBorderColor='none'
+                    focusBorderColor={'none'}
                     />
                     <Button
                     p={'0'}
@@ -33,6 +35,7 @@ const Footer = () => {
                     variant={'ghost'}
                     borderRadius={'0 20px 20px 0'}>
                         <AiOutlineSend size={20}/>
+                        
                     </Button>
                 
                 </HStack>
@@ -51,17 +54,30 @@ const Footer = () => {
             </VStack>
 
             <VStack 
-            w={'full'}
+            w={'full'}           
             >
                 <Heading size={'md'} textTransform={'uppercase'}>
                     Social Media
                 </Heading>
 
                 <Button variant={'link'} colorScheme={'white'}>
-                    <a href='http://youtube.com'>
-                        Youtube
+                    <a target='black' href='http://youtube.com'>
+                       <AiFillYoutube size={30} />
                     </a>
                 </Button>
+
+                <Button variant={'link'} colorScheme={'white'}>
+                    <a target='black' href='http://instagram.com'>
+                      <AiFillInstagram size={30} />
+                    </a>
+                </Button>
+
+                <Button variant={'link'} colorScheme={'white'}>
+                    <a target='black' href='https://github.com/akpbadnawar'>
+                       <AiFillGithub size={30} />
+                    </a>
+                </Button>
+
             </VStack>
         </Stack>
     </Box>
